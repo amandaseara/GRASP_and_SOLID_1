@@ -26,6 +26,10 @@ namespace Full_GRASP_And_SOLID
             recipe.AddStep(new Step(GetProduct("Café"), 100, GetEquipment("Cafetera"), 120));
             recipe.AddStep(new Step(GetProduct("Leche"), 200, GetEquipment("Hervidor"), 60));
             recipe.PrintRecipe();
+            //Llamo a los metodos agregados
+            double costIns = recipe.CostInsumos();
+            double costEq = recipe.CostEquip();
+            recipe.CostTotal(costIns,costEq);
         }
 
         private static void PopulateCatalogs()
